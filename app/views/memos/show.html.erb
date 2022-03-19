@@ -1,0 +1,30 @@
+<h3>スケジュール詳細</h3>
+
+<table>
+<tr>
+<th>タイトル</th>
+<td><%= @memo.title %></td>
+</tr>
+<tr>
+<th>開始日</th>
+<td><%= @memo.start_date %></td>
+</tr>
+<tr>
+<th>終了日</th>
+<td><%= @memo.end_date %></td>
+</tr>
+<tr>
+<th>終日</th>
+<td><%= @memo.all_day %></td>
+</tr>
+<tr>
+<th>スケジュールメモ</th>
+<td><%= @memo.schedule %></td>
+</tr>
+</table>
+
+<div>
+  <ul>
+    <li><%= link_to "スケジュール一覧", :memos %></li>
+  </ul>
+</div>

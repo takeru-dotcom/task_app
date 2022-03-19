@@ -1,0 +1,47 @@
+header{
+  color: white;
+  font-size: 35px;
+  width:100%;
+  padding:30px;
+  margin-bottom:30px;
+  background-color: #a52a2a;
+}
+
+footer{
+  color: white;
+  font-size: 35px;
+  width:100%;
+  padding:30px;
+  margin-top:30px;
+  background-color: #a52a2a;
+}
+
+h3{
+  font-size:30px;
+}
+table th {
+  background-color: pink;
+  padding: 10px 20px;
+}
+
+table td {
+  background-color: #c8c4ff;
+  padding: 10px 20px;
+  text-align:center;
+  
+}
+
+.notice {
+  background-color: rgba(121, 199, 5, 0.507);
+  text-align:center;
+  width:300px;
+  padding:30px;
+}
+
+.notice_red{
+  background-color: red;
+  color: white;
+  text-align:center;
+  width:300px;
+  padding:30px;
+}
