@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <header>Ruby on Rails スケジュール管理アプリ</header>
     <%= yield %>
+    <footer>現在の日時:<%= Date.today %> スケジュール合計:<%= Memo.all.count(:id) %></footer>
   </body>
 </html>

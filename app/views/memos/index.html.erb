@@ -1,0 +1,49 @@
+<h3>スケジュール一覧</h3>
+
+<% if flash[:notice] %>
+  <p class="notice"> <%= flash[:notice] %> </p>
+<% end %>
+
+<% if flash[:notice_red] %>
+  <p class="notice_red"> <%= flash[:notice_red] %> </p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>終日</th>
+      <th>スケジュール更新日時</th>
+      <th>確認</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @memos.each do |memo|%>
+    <tr>
+      <td><%= memo.id %></td>
+      <td><%= memo.title %></td>
+      <td><%= memo.start_date %></td>
+      <td><%= memo.end_date %></td>
+      <td>
+      <% if memo.all_day == "1" %>
+      ○
+      <% else %>
+      
+      <% end %>
+      </td>
+      <td><%= memo.updated_at.to_s(:datetime_jp) %></td>
+      <td><%= link_to"確認", memo %></td>
+      <td><%= link_to"編集", [:edit,memo] %></td>
+      <td><%= link_to"削除", memo,method: :delete, data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" }  %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to"スケジュール新規登録", :new_memo %></p>
